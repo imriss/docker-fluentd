@@ -20,9 +20,7 @@ RUN buildDeps="make gcc g++ libc-dev ruby-dev zlib1g-dev libz-dev git" \
         fluent-plugin-rewrite-tag-filter \
         fluent-plugin-azurestorage \
         fluent-plugin-oss \
-        fluent-plugin-grafana-loki \
-        fluent-plugin-record-modifier
-
+        fluent-plugin-grafana-loki
 
 RUN gem specific_install -l https://github.com/banzaicloud/fluent-plugin-gcs.git
     
