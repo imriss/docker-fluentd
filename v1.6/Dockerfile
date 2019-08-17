@@ -1,4 +1,4 @@
-FROM fluent/fluentd:v1.5.0-debian-1.0
+FROM fluent/fluentd:v1.6.3-debian-1.1
 MAINTAINER Baznai Cloud <info@banzaicloud.com>
 
 RUN mkdir -p /fluentd/etc /fluentd/plugins
@@ -21,7 +21,8 @@ RUN buildDeps="make gcc g++ libc-dev ruby-dev zlib1g-dev libz-dev git" \
         fluent-plugin-azurestorage \
         fluent-plugin-oss \
         fluent-plugin-grafana-loki \
-        fluent-plugin-record-modifier
+        fluent-plugin-record-modifier \
+        fluent-plugin-dedot_filter
 
 
 RUN gem specific_install -l https://github.com/banzaicloud/fluent-plugin-gcs.git
